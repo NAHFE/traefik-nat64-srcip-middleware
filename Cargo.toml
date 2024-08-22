@@ -1,0 +1,16 @@
+[package]
+name = "traefik-nat64-srcip-middleware"
+version = "0.1.0"
+authors = ["NAHFE <nahfe@nahfe.dev>"]
+description = "Converts NAT64 source IP addresses to IPv4 addresses and inserts into headers"
+edition = "2021"
+license-file = "LICENSE"
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+
+
+[dependencies]
+netaddr2 = { version = "0.10.0", features = ["serde"] }
+serde = { version = "1.0.208", features = ["derive"] }
+serde_json = "1.0.125"

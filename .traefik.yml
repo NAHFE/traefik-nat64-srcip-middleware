@@ -1,0 +1,10 @@
+displayName: NAT64 Source IP Translation
+type: middleware
+runtime: wasm
+summary: Converts NAT64 source IP addresses to IPv4 addresses and inserts into headers
+testData:
+  networks:
+    - "2001:db8::/96"
+  headers:
+    - "X-Forwarded-For"
+    - "X-Real-Ip"
